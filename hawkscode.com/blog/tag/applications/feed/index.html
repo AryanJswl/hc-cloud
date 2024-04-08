@@ -1,0 +1,213 @@
+<!--WPFC_PAGE_TYPE_tag--><?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>applications Archives - HawksCode</title>
+	<atom:link href="https://hawkscode.com/blog/tag/applications/feed/" rel="self" type="application/rss+xml" />
+	<link>https://hawkscode.com/blog/tag/applications/</link>
+	<description>Web, Software, Mobile App, ERP Design and Development Company</description>
+	<lastBuildDate>Sat, 17 Oct 2020 10:40:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.5</generator>
+	<item>
+		<title>What is State in React? and Its Usage</title>
+		<link>https://hawkscode.com/blog/what-is-state-in-react-and-its-usage/</link>
+					<comments>https://hawkscode.com/blog/what-is-state-in-react-and-its-usage/#comments</comments>
+		
+		<dc:creator><![CDATA[Chandni Sharma]]></dc:creator>
+		<pubDate>Sat, 17 Oct 2020 10:40:00 +0000</pubDate>
+				<category><![CDATA[Application Development]]></category>
+		<category><![CDATA[Mobile Application]]></category>
+		<category><![CDATA[PHP/MySQL]]></category>
+		<category><![CDATA[Technologies]]></category>
+		<category><![CDATA[Web & Graphic Design]]></category>
+		<category><![CDATA[Web Design]]></category>
+		<category><![CDATA[Application. Development]]></category>
+		<category><![CDATA[applications]]></category>
+		<category><![CDATA[Mobile App Development]]></category>
+		<category><![CDATA[Mobile Application Development]]></category>
+		<category><![CDATA[Mobile Apps]]></category>
+		<guid isPermaLink="false">https://hawkscode.com/blog/?p=5528</guid>
+
+					<description><![CDATA[<p>What is State in React?&#160;State&#160;is a JavaScript object that stores component’s dynamic data and it enables a component to keep track of changes between renders. Because state is dynamic, it is reserved only for interactivity so you don’t use it for static React projects. Components defined as classes have some additional features. Local&#160;state&#160;is exactly that: </p>
+<p>The post <a rel="nofollow" href="https://hawkscode.com/blog/what-is-state-in-react-and-its-usage/">What is State in React? and Its Usage</a> appeared first on <a rel="nofollow" href="https://hawkscode.com/blog">HawksCode</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image size-large"><img fetchpriority="high" decoding="async" width="1024" height="1024" src="https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-1024x1024.png" alt="" class="wp-image-5531" srcset="https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-1024x1024.png 1024w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-300x300.png 300w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-150x150.png 150w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-768x768.png 768w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-696x696.png 696w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-1068x1068.png 1068w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim-420x420.png 420w, https://hawkscode.com/blog/wp-content/uploads/2020/09/imgpsh_fullsize_anim.png 1080w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p><strong>What is State in React?</strong>&nbsp;<em>State</em>&nbsp;is a JavaScript object that stores component’s dynamic data and it enables a component to keep track of changes between renders. Because state is dynamic, it is reserved only for interactivity so you don’t use it for static React projects.</p>
+
+
+
+<p>Components defined as classes have some additional features. Local&nbsp;<em>state</em>&nbsp;is exactly that: a feature available only to classes. S<em>tate</em>&nbsp;can only be used within a class and usually the only place where you can assign&nbsp;this.state&nbsp;is the constructor.</p>
+
+
+
+<p><strong>class</strong>&nbsp;Greeting&nbsp;<strong>extends</strong>&nbsp;React.Component {<br><strong>constructor()&nbsp;</strong>{<br><strong>super()</strong>;<strong>this</strong>.state = {<br><strong>name</strong>: ‘John Smith’<br>}<br>}<br><strong>render</strong>() {<br><strong>return&lt;h1&gt;</strong>Hello, my name is {&nbsp;<strong>this</strong>.state.<strong>name</strong>&nbsp;}<strong>&lt;/h1&gt;;</strong>}<br>}</p>
+
+
+
+<p><strong>class</strong>&nbsp;Greeting&nbsp;<strong>extends</strong>&nbsp;React.Component {<br>state = {<br><strong>name</strong>: ‘John Smith’<br>}<br>}<br><strong>render</strong>() {<br><strong>return</strong>&nbsp;<strong>&lt;h1&gt;</strong>Hello, my name is {&nbsp;<strong>this</strong>.state.<strong>name</strong>&nbsp;}<strong>&lt;/h1&gt;;</strong>}<br>}</p>
+
+
+
+<h2 class="has-very-dark-gray-color has-text-color wp-block-heading"><strong>State Updates May Be Asynchronous</strong></h2>
+
+
+
+<p><strong>What is State in React?&nbsp;</strong>React may batch multiple&nbsp;setState()&nbsp;calls into a single update for performance. Calls to&nbsp;<em>setState</em>&nbsp;are asynchronous when they are inside event handlers and that when you don’t rely on&nbsp;this.state&nbsp;to reflect the new value immediately after calling&nbsp;<em>setState</em>.</p>
+
+
+
+<p>incrementCount() {<br>// Note: this will *not* work as intended.<br><strong>this</strong>.setState(<strong>{</strong>count: this.state.count + 1<strong>}</strong>);<br>}</p>
+
+
+
+<p>handleSomething() {<br>// Let’s say `this.state.count` starts at 0.<br><strong>this</strong>.incrementCount();<br><strong>this</strong>.incrementCount();<br><strong>&nbsp;this</strong>.incrementCount();<br>// When React re-renders the component, `this.state.count` will be 1, but you expected 3.</p>
+
+
+
+<p>// This is because `incrementCount()` function above reads from `this.state.count`,<br>// but React doesn’t update `this.state.count` until the component is re-rendered.<br>// So `incrementCount()` ends up reading `this.state.count` as 0 every time, and sets it to 1.</p>
+
+
+
+<p>To fix it, use a second form of&nbsp;<em>setState</em>&nbsp;that accepts a function rather than an object to ensure the call always uses the most updated version of&nbsp;<em>state</em>. i hope now it’s clear to you&nbsp;<strong>What is State in React?</strong></p>
+
+
+
+<p>Passing an update function allows you to access the&nbsp;<em>current state value</em>&nbsp;inside the updater. Since&nbsp;<em>setState</em>&nbsp;calls are batched, this lets you chain updates and ensure they build on top of each other instead of conflicting:</p>
+
+
+
+<p>incrementCount() {<br><strong>this</strong>.setState(<strong>(state)</strong>&nbsp;=&gt; {<br>// Important: read `state` instead of `this.state` when updating.<br>return {count:&nbsp;<strong>state</strong>.count + 1}<br>});<br>}</p>
+
+
+
+<p>handleSomething() {<br>// Let’s say `this.state.count` starts at 0.<br><strong>this</strong>.incrementCount();<br><strong>this</strong>.incrementCount();<br><strong>this</strong>.incrementCount();</p>
+
+
+
+<p>// If you read `this.state.count` now, it would still be 0.<br>// But when React re-renders the component, it will be 3.<br>}</p>
+
+
+
+<p>Also you can pass&nbsp;<em>props</em>&nbsp;as a second argument at the time the update is applied:</p>
+
+
+
+<p>// Correct<br><strong>this</strong>.setState(<strong>(state</strong>,&nbsp;<strong>props)</strong>&nbsp;=&gt; ({<br>counter:&nbsp;<strong>state</strong>.counter +&nbsp;<strong>props</strong>.increment<br>}));</p>
+
+
+
+<p><strong>State Updates are Merged</strong></p>
+
+
+
+<p>When you call&nbsp;setState(), React merges the object you provide into the current state.</p>
+
+
+
+<p>For instance, your state may contain several independent variables:</p>
+
+
+
+<p>constructor(<strong>props</strong>) {<br>super(<strong>props</strong>);<br><strong>this</strong>.state = {<br>posts: [],<br>comments: []<br>};<br>}</p>
+
+
+
+<p>Then you can update them independently with separate&nbsp;setState()&nbsp;calls:</p>
+
+
+
+<p>componentDidMount() {<br>fetchPosts().<strong>then</strong>(response =&gt; {<br><strong>this</strong>.setState(<strong>{</strong><br>posts: response.posts<br><strong>}</strong>);<br>});</p>
+
+
+
+<p>fetchComments().<strong>then</strong>(response =&gt; {<br><strong>this</strong>.setState(<strong>{</strong><br>comments: response.comments<br><strong>}</strong>);<br>});<br>}</p>
+
+
+
+<p>The merging is shallow, so&nbsp;this.setState({comments})&nbsp;leaves&nbsp;this.state.posts&nbsp;intact, but completely replaces&nbsp;this.state.comments.</p>
+
+
+
+<p>You might be asking what is&nbsp;ComponentDidMount()&nbsp;and how it is used. It is a method that is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. So if you need to load data from a remote endpoint (API), this is a good place to instantiate the network request.</p>
+
+
+
+<p><strong>What is State in React?&nbsp;</strong>As you can see in the above example the properties for&nbsp;this.state&nbsp;are now independent and separately added&nbsp;this.setState&nbsp;, passed an object to each property and surrounded them by&nbsp;ComponentDidMount()&nbsp;where they will be added to the DOM tree after we get the response from the&nbsp;fetchPosts()&nbsp;and&nbsp;fetchComments().</p>
+
+
+
+<p class="has-background has-very-light-gray-background-color">I hope you like this blog,&nbsp;<strong>What is State in React?&nbsp;</strong>To learn more visit&nbsp;<a rel="noreferrer noopener" href="http://www.hawkscode.com/" target="_blank"><strong><span class="has-inline-color has-vivid-green-cyan-color">HawksCode</span></strong></a>&nbsp;and&nbsp;<a rel="noreferrer noopener" href="http://www.easyshsiksha.com/" target="_blank"><strong><span class="has-inline-color has-vivid-green-cyan-color">Easyshiksha</span></strong></a>.</p>
+<p>The post <a rel="nofollow" href="https://hawkscode.com/blog/what-is-state-in-react-and-its-usage/">What is State in React? and Its Usage</a> appeared first on <a rel="nofollow" href="https://hawkscode.com/blog">HawksCode</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hawkscode.com/blog/what-is-state-in-react-and-its-usage/feed/</wfw:commentRss>
+			<slash:comments>7</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>How to do Mobile Application Development for Android and iOS</title>
+		<link>https://hawkscode.com/blog/how-to-mobile-application-development-android-ios/</link>
+					<comments>https://hawkscode.com/blog/how-to-mobile-application-development-android-ios/#comments</comments>
+		
+		<dc:creator><![CDATA[Sunil Sharma]]></dc:creator>
+		<pubDate>Tue, 01 May 2018 12:17:43 +0000</pubDate>
+				<category><![CDATA[Application Development]]></category>
+		<category><![CDATA[Mobile Application]]></category>
+		<category><![CDATA[Services]]></category>
+		<category><![CDATA[Technologies]]></category>
+		<category><![CDATA[App]]></category>
+		<category><![CDATA[applications]]></category>
+		<category><![CDATA[development]]></category>
+		<category><![CDATA[Mobile Application Development]]></category>
+		<guid isPermaLink="false">https://hawkscode.com/blog/?p=4821</guid>
+
+					<description><![CDATA[<p>When one thinks of coming up with a mobile application development, now it is not that simple than before. There was a time when there was a mare of applications in the market that made easy to stand out. But now there are thousands of applications build with same goals. So you can say that </p>
+<p>The post <a rel="nofollow" href="https://hawkscode.com/blog/how-to-mobile-application-development-android-ios/">How to do Mobile Application Development for Android and iOS</a> appeared first on <a rel="nofollow" href="https://hawkscode.com/blog">HawksCode</a>.</p>
+]]></description>
+										<content:encoded><![CDATA[<p style="text-align: justify;"><a href="https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1.png"><img decoding="async" class="aligncenter size-full wp-image-4823" src="https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1.png" alt="mobile application development, app, applications, development" width="1000" height="622" srcset="https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1.png 1000w, https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1-300x187.png 300w, https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1-356x220.png 356w, https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1-696x433.png 696w, https://hawkscode.com/blog/wp-content/uploads/2018/05/Mobile-Application-Development-1-675x420.png 675w" sizes="(max-width: 1000px) 100vw, 1000px" /></a></p>
+<p style="text-align: justify;">When one thinks of coming up with a <span style="color: #ffffff; background-color: #ff0080;"><strong><a style="color: #ffffff; background-color: #ff0080;" href="https://hawkscode.com/technologies/mobile-application/" target="_blank">mobile application development</a></strong></span>, now it is not that simple than before. There was a time when there was a mare of applications in the market that made easy to stand out. But now there are thousands of applications build with same goals. So you can say that it is harder than before. Also making an app is costly and time-consuming too. But there are chances if you work with some plan you may achieve it with lesser cost and time.</p>
+<p style="text-align: justify;">One need to be so particular about before stepping into application development. Making your applications are now more complex than before. To go with a systematic approach towards the applications development we have made some list so to help you in working on your application.</p>
+<h3 style="text-align: justify;"><span style="background-color: #00ccff; color: #ffffff;"><strong>Imagination and Idea:</strong></span></h3>
+<p style="text-align: justify;">If you are into creative work imagination is must need part of it. One has to imagine why he/ she is making that application. What are problem sectors that your application is going to resolve? What will be the features of your application? This imagination should provide some tangling benefit to your customers too. You must keep coming to them with new solutions, new revenue and enhanced productivity.</p>
+<h3 style="text-align: justify;"><span style="color: #ffffff; background-color: #00ccff;"><strong>Market to be Targeted:</strong></span></h3>
+<p style="text-align: justify;">Another step before starting the journey is to know the path you are walking in so can be prepared for anything that will come later. If you don’t know any single thing about your native market, it becomes hard to compete. First is that you should know who you are targeting. Not knowing your audience is a big disadvantage. It gives you clear vision toward your application. This is where your pitch come handy. All you need to do is blend all your ideas, vision, mission and imagination into two or three sentences. This must be catchy one that explains everything you are putting into your applications.</p>
+<h3><span style="background-color: #00ccff; color: #ffffff;"><strong>A platform for Application:</strong></span></h3>
+<p style="text-align: justify;">When it comes to selecting what platform you are about to work then you must go with right choice as per business. This task is done with the analytic that you got when you researched your market. There is three choice you got; Native, Web, Hybrid. Choose one from these and they will help you in future maintenance and development.</p>
+<p><span style="background-color: #ff0080; color: #ffffff;"><strong>Native:</strong></span> Have best UI but require better significant skills and time to develop.</p>
+<p><span style="background-color: #ff0080; color: #ffffff;"><strong>Hybrid:</strong></span> Have a prebuilt native container with on-the-fly web coding to achieve best out of all.</p>
+<p><span style="color: #ffffff; background-color: #ff0080;"><strong>Web:</strong></span> It is quick and cheap and is developed in HTML 5, JS and CSS.</p>
+<h3><span style="background-color: #00ccff; color: #ffffff;"><strong>Track Your Self:</strong></span></h3>
+<p style="text-align: justify;">Use an appropriate analytic tool for your application. Track how well they are performing. Analytic gives you a brief idea of how users are coming on your application. You can know how a user came to an app? What service are they using? Which one are they not? This analysis will come in handy when you are updating your application or bringing some changes as per your user&#8217;s behaviours. For this you can take help from these:</p>
+<ul>
+<li>Google Analytic</li>
+<li>Flurry</li>
+<li>Localytics</li>
+<li>Mixpanel</li>
+<li>Preemptive</li>
+</ul>
+<p>The post <a rel="nofollow" href="https://hawkscode.com/blog/how-to-mobile-application-development-android-ios/">How to do Mobile Application Development for Android and iOS</a> appeared first on <a rel="nofollow" href="https://hawkscode.com/blog">HawksCode</a>.</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hawkscode.com/blog/how-to-mobile-application-development-android-ios/feed/</wfw:commentRss>
+			<slash:comments>15</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
