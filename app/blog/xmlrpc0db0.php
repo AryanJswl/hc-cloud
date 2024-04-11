@@ -2,13 +2,13 @@
 	<service>
 		<engineName>WordPress</engineName>
 		<engineLink>https://wordpress.org/</engineLink>
-		<homePageLink>https://hawkscode.hopin.space/blog/</homePageLink>
+		<homePageLink>https://hawks-code.com/blog/</homePageLink>
 		<apis>
-			<api name="WordPress" blogID="1" preferred="true" apiLink="https://hawkscode.hopin.space/blog/xmlrpc.php" />
-			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://hawkscode.hopin.space/blog/xmlrpc.php" />
-			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://hawkscode.hopin.space/blog/xmlrpc.php" />
-			<api name="Blogger" blogID="1" preferred="false" apiLink="https://hawkscode.hopin.space/blog/xmlrpc.php" />
-				<api name="WP-API" blogID="1" preferred="false" apiLink="https://hawkscode.hopin.space/blog/wp-json/" />
+			<api name="WordPress" blogID="1" preferred="true" apiLink="https://hawks-code.com/blog/xmlrpc.php" />
+			<api name="Movable Type" blogID="1" preferred="false" apiLink="https://hawks-code.com/blog/xmlrpc.php" />
+			<api name="MetaWeblog" blogID="1" preferred="false" apiLink="https://hawks-code.com/blog/xmlrpc.php" />
+			<api name="Blogger" blogID="1" preferred="false" apiLink="https://hawks-code.com/blog/xmlrpc.php" />
+				<api name="WP-API" blogID="1" preferred="false" apiLink="https://hawks-code.com/blog/wp-json/" />
 			</apis>
 	</service>
 </rsd>
